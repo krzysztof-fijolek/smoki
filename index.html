@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smoki i Lochy</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: url("bg.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: #492c22;
+        color: #cdc5bc;
+        font-family: "Architects Daughter", cursive;
+        /* overflow-y: hidden; */
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        main {
+          flex-direction: row;
+        }
+      }
+      .branding {
+        margin: 0 auto;
+        border-radius: 16px;
+        padding: 16px;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .branding {
+          width: 100%;
+          flex-basis: 50%;
+          flex-grow: 1;
+        }
+      }
+      .portraits {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+      }
+      .portrait {
+        flex-basis: calc(33% - 20px);
+        width: 10px;
+        height: auto;
+        background-color: #cdc5bc;
+        border-radius: 50%;
+        padding: 1px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.4),
+          0 0 32px rgba(0, 0, 0, 0.5) inset;
+        flex-shrink: 1;
+        flex-grow: 1;
+      }
+
+      @media (min-width: 768px) {
+        .portrait {
+          padding: 10px;
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+      }
+      .wrapper {
+        display: flex;
+        gap: 50px;
+        width: 100%;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .newsletter-wrapper {
+        flex-grow: 0;
+        width: 100%;
+      }
+      .newsletter {
+        margin: 0 auto;
+        width: 100%;
+        min-height: 800px;
+      }
+      @media (min-width: 768px) {
+        .newsletter-wrapper {
+          width: 100%;
+          flex-basis: 50%;
+          flex-grow: 1;
+        }
+      }
+      h1 {
+        font-size: 100px;
+      }
+      h2 {
+        font-size: 54px;
+        color: #fff;
+      }
+      h3 {
+        font-size: 32px;
+        color: #fff;
+      }
+      h1,
+      h2,
+      h3 {
+        text-shadow: 2px 2px 2px #000;
+      }
+
+      @media (max-width: 767px) {
+        h1 {
+          font-size: 48px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+      }
+
+      .mail-button {
+        box-shadow: 0px 1px 0px 0px #1c1b18;
+        background: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+        background-color: #eae0c2;
+        border-radius: 15px;
+        border: 2px solid #333029;
+        display: inline-block;
+        cursor: pointer;
+        color: #505739;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #ffffff;
+        margin: 20px 0 0 0;
+      }
+      .mail-button:hover {
+        background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+        background-color: #ccc2a6;
+      }
+      .mail-button:active {
+        position: relative;
+        top: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <div class="branding">
+          <div class="portraits">
+            <img src="/portrait/7.png" alt="" class="portrait" />
+            <img src="/portrait/4.png" alt="" class="portrait" />
+            <img src="/portrait/5.png" alt="" class="portrait" />
+          </div>
+          <h1>Smoki i Lochy</h1>
+          <h2>Pub z planszówkami - Gdańsk Wrzeszcz</h2>
+          <h3>Otwarcie Jesień 2023 - zapisz się aby otrzymać info!</h3>
+          <div>
+            <a href="mailto:smoki.i.lochy@gmail.com" class="mail-button"
+              >Napisz do nas</a
+            >
+          </div>
+        </div>
+        <div class="newsletter-wrapper">
+          <iframe
+            class="newsletter"
+            src="https://docs.google.com/forms/d/e/1FAIpQLScgn3spHhkV2MiGPDRqxCjjr8UROIhAL6RKqJd69DbiTVGNuA/viewform?embedded=true"
+            width="500px"
+            height="626"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            >Loading…</iframe
+          >
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
